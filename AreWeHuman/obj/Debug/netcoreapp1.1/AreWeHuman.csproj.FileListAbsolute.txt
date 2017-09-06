@@ -1,0 +1,8 @@
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/AreWeHuman/bin/Debug/netcoreapp1.1/AreWeHuman.deps.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/AreWeHuman/bin/Debug/netcoreapp1.1/AreWeHuman.runtimeconfig.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/AreWeHuman/bin/Debug/netcoreapp1.1/AreWeHuman.runtimeconfig.dev.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/AreWeHuman/bin/Debug/netcoreapp1.1/AreWeHuman.dll
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/AreWeHuman/bin/Debug/netcoreapp1.1/AreWeHuman.pdb
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/AreWeHuman/obj/Debug/netcoreapp1.1/AreWeHuman.AssemblyInfo.cs
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/AreWeHuman/obj/Debug/netcoreapp1.1/AreWeHuman.dll
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/AreWeHuman/obj/Debug/netcoreapp1.1/AreWeHuman.pdb
