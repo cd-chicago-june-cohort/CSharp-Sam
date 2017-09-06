@@ -4,11 +4,11 @@ using System.Collections.Generic;
 namespace AreWeHuman
 {
     public class Human{
-        public string name;
-        public int strength;
-        public int intelligence;
-        public int dexterity;
-        public int health;
+        public string name {get; set;}
+        public int strength {get; set;}
+        public int intelligence {get; set;}
+        public int dexterity {get; set;}
+        public int health {get; set;}
 
         public Human(string newName = ""){
             name = newName;
@@ -32,7 +32,13 @@ namespace AreWeHuman
                 int damage = 5 * strength;
                 temp.health -= damage;
                 opponent = temp;
+            } else {
+                Console.WriteLine("Failed Attack!");
             }
+        }
+
+        public void Show(){
+            Console.WriteLine($"Name: {name} Strength: {strength} Intelligence: {intelligence} Dexterity: {dexterity} Health: {health}");
         }
 
     }
