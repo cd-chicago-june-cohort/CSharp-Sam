@@ -47,6 +47,14 @@ namespace ConsoleApplication
             foreach(var artist in OldAtlanta){
                 Console.WriteLine($"{artist.RealName} is from {artist.Hometown}, is part of the group {artist.ArtistName}, and is {artist.Age} years old.");
             }
+
+            //Display all groups with names less than 8 characters in length.
+            List<Group> shortNames = Groups.Where(group => group.GroupName.Length < 8).ToList();
+
+            foreach(var name in shortNames){
+                Console.WriteLine($"Less than 8 letters! {name.GroupName}");
+            }
+
             //(Optional) Display the Group Name of all groups that have members that are not from New York City
             var notNY = Artists.Where(artist => artist.Hometown != "New York City").Join(Groups, 
                                                 artist => artist.GroupId,
