@@ -1,0 +1,8 @@
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CRUD/bin/Debug/netcoreapp1.1/CRUD.deps.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CRUD/bin/Debug/netcoreapp1.1/CRUD.runtimeconfig.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CRUD/bin/Debug/netcoreapp1.1/CRUD.runtimeconfig.dev.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CRUD/bin/Debug/netcoreapp1.1/CRUD.dll
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CRUD/bin/Debug/netcoreapp1.1/CRUD.pdb
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CRUD/obj/Debug/netcoreapp1.1/CRUD.AssemblyInfo.cs
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CRUD/obj/Debug/netcoreapp1.1/CRUD.dll
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CRUD/obj/Debug/netcoreapp1.1/CRUD.pdb
