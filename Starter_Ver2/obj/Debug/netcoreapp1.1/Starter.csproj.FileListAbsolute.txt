@@ -1,0 +1,8 @@
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/Starter_Ver2/bin/Debug/netcoreapp1.1/Starter.deps.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/Starter_Ver2/bin/Debug/netcoreapp1.1/Starter.runtimeconfig.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/Starter_Ver2/bin/Debug/netcoreapp1.1/Starter.runtimeconfig.dev.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/Starter_Ver2/bin/Debug/netcoreapp1.1/Starter.dll
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/Starter_Ver2/bin/Debug/netcoreapp1.1/Starter.pdb
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/Starter_Ver2/obj/Debug/netcoreapp1.1/Starter.AssemblyInfo.cs
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/Starter_Ver2/obj/Debug/netcoreapp1.1/Starter.dll
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/Starter_Ver2/obj/Debug/netcoreapp1.1/Starter.pdb
