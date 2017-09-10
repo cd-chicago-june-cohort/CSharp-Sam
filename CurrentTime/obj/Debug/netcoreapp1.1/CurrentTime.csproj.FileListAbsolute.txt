@@ -1,0 +1,8 @@
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CurrentTime/bin/Debug/netcoreapp1.1/CurrentTime.deps.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CurrentTime/bin/Debug/netcoreapp1.1/CurrentTime.runtimeconfig.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CurrentTime/bin/Debug/netcoreapp1.1/CurrentTime.runtimeconfig.dev.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CurrentTime/bin/Debug/netcoreapp1.1/CurrentTime.dll
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CurrentTime/bin/Debug/netcoreapp1.1/CurrentTime.pdb
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CurrentTime/obj/Debug/netcoreapp1.1/CurrentTime.AssemblyInfo.cs
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CurrentTime/obj/Debug/netcoreapp1.1/CurrentTime.dll
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/CurrentTime/obj/Debug/netcoreapp1.1/CurrentTime.pdb
