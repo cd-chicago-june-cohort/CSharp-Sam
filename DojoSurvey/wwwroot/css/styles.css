@@ -1,0 +1,17 @@
+.container{
+    padding: 15px;
+}
+
+.block-label{
+    display:block;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+td {
+    padding-left: 15px;
+    font-size: 18px;
+    padding-bottom: 5px;
+}

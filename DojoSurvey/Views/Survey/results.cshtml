@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Dojo Survey</title>
+        <link rel="stylesheet" href="~/css/styles.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div class="container container-fluid">
+            <h2>Submitted Info:</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name:</td>
+                        <td>@ViewBag.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Location:</td>
+                        <td>@ViewBag.Loc</td>
+                    </tr>
+                    <tr>
+                        <td>Favorite Language:</td>
+                        <td>@ViewBag.Lang</td>
+                    </tr>
+                    <tr>
+                        <td>Comment:</td>
+                        <td>@ViewBag.Comment</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="/"><button class="btn btn-info">Go Back</button></a>
+        </div>
+    </body>
+</html>

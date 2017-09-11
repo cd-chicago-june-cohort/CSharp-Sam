@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Dojo Survey</title>
+        <link rel="stylesheet" href="~/css/styles.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div class="container container-fluid">
+        <h1>Survey</h1>
+        <form action="survey" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name"/>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select name="location">
+                    <option value="San Jose">San Jose, CA</option>
+                    <option value="Chicago">Chicago, IL</option>
+                    <option value="New York">New York, NY</option>
+                    <option value="Seattle">Seattle, WA</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="lang">Favorite Language:</label>
+                <select name="lang">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="C#">C#</option>
+                    <option value="Python">Python</option>
+                    <option value="Ruby">Ruby</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comment" class="block-label">Comment (optional):</label>
+                <textarea name="comment"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+    </body>
+</html>

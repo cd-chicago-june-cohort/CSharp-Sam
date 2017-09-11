@@ -1,0 +1,8 @@
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/DojoSurvey/bin/Debug/netcoreapp1.1/DojoSurvey.deps.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/DojoSurvey/bin/Debug/netcoreapp1.1/DojoSurvey.runtimeconfig.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/DojoSurvey/bin/Debug/netcoreapp1.1/DojoSurvey.runtimeconfig.dev.json
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/DojoSurvey/bin/Debug/netcoreapp1.1/DojoSurvey.dll
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/DojoSurvey/bin/Debug/netcoreapp1.1/DojoSurvey.pdb
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/DojoSurvey/obj/Debug/netcoreapp1.1/DojoSurvey.AssemblyInfo.cs
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/DojoSurvey/obj/Debug/netcoreapp1.1/DojoSurvey.dll
+/Users/CourtneyWarren/Desktop/DojoAssignments/netCore/DojoSurvey/obj/Debug/netcoreapp1.1/DojoSurvey.pdb
