@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Dojo Survey</title>
+        <link rel="stylesheet" href="~/css/styles.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="~/js/script.js"></script>
+    </head>
+    <body>
+        <div class="body">
+            <ul id="infobar">
+                <li>Fullness: @TempData["fullness"]</li>
+                <li>Happiness: @TempData["happiness"]</li>
+                <li>Energy: @TempData["energy"]</li>
+                <li>Meals: @TempData["meals"]</li>
+            </ul>
+            <div class="message-box">
+                <p>@ViewBag.message</p>
+            </div>
+            @{ 
+                if (!ViewBag.win && !ViewBag.lose) {
+            <div class="action-div">
+                @{
+                    if(ViewBag.showFeed)  {
+                        <a href="feed"><button class="actions" id="feed">Feed</button></a>
+                    }  else {
+                        <button class="dormant">Feed</button>
+                    }
+                }
+                <a href="play"><button class="actions" id="play">Play</button></a>
+                <a href="work"><button class="actions" id="work">Work</button></a>
+                <a href="sleep"><button class="actions" id="sleep">Sleep</button></a>
+            </div>
+            } else {
+                <a href="restart"><button id="restart">Restart</button></a>
+            }
+            }
+        </div>
+    </body>
+</html>

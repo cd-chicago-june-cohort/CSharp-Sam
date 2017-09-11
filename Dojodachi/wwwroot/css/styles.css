@@ -1,0 +1,63 @@
+.body{
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.message-box{
+    width: 400px;
+    height: 120px;
+    margin:auto;
+    border: 3px solid black;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+#infobar li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 15px;
+}
+
+#infobar{
+    text-align: center;
+}
+
+.actions{
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 70px;
+    background: blue;
+}
+
+.action-div{
+    width: 400px;
+    height: 60px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.dormant{
+    background: grey;
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 70px;
+}
+
+.restart-div{
+    width: 400px;
+    height: 60px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#restart{
+    background: green;
+    color: white;
+    margin: auto;
+    width: 70px;
+    display: block;
+    margin-top: 10px;
+}
