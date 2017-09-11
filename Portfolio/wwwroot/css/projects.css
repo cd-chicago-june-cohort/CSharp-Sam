@@ -1,0 +1,33 @@
+h1{
+    margin-left: 15px;
+}
+.project{
+    height: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.frame{
+    margin-left:5px; 
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.info{
+    padding-left: 20px;
+    height: 200px;
+    width: 500px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+}
+
+.frame img {
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,26 @@
+h1{
+    margin-left: 15px;
+}
+
+.form{
+    width: 500px;
+    height: 400px;
+    margin-left: 15px;
+}
+
+input{
+    width: 240px;
+    height: 25px;
+    font-size: 16px;
+}
+
+form div{
+    margin-top: 10px;
+}
+
+textarea{
+    width: 240px;
+    height: 60px;
+    margin-bottom: 10px; 
+    font-size: 16px;
+}
