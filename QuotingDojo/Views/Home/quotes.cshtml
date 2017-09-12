@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "All Quotes";
+}
+
+<h3>Here are all the awesome quotes!</h3>
+@{
+    foreach(var quote in @ViewBag.Quotes){
+        string myDate = quote["created_at"].ToString("MMMM dd, yyyy");
+        string myTime = quote["created_at"].ToString("h:mm tt");
+        <h4>"<span>@quote["content"]</span>"</h4>
+        <p>-@quote["speaker"] at @myTime @myDate</p>
+        <hr>
+    }
+}
+<a href="/"><button class="btn btn-info">Add a new quote!</button></a>

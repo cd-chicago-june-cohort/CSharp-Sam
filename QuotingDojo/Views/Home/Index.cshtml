@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form action="add" method="post" id="quoteForm">
+    <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input class="form-control" type="text" name="name">
+    </div>
+    <div class="form-group">
+        <label for="content">Your Quote:</label>
+        <textarea class="form-control" name="content"></textarea>
+    </div>
+</form>
+<button class="btn btn-info" type="submit" form="quoteForm">Submit Quote!</button>
+<a href="quotes"><button class="btn btn-info">Skip to Quotes!</button></a>
