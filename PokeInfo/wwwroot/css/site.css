@@ -1,0 +1,15 @@
+/*Write all of your CSS here*/
+
+.frame{
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    overflow: hidden;
+    border-radius: 3px;
+    display: block;
+}
+
+.frame img{
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    if (ViewBag.pokeShow) {
+        <h1>@ViewBag.pokemon["name"]</h1>
+        <div class="frame"><img src='@ViewBag.pokemon["sprites"]["front_default"]'></div>
+        <h3>Types:</h3>
+        foreach(var type in @ViewBag.pokemon["types"]) {
+            <p>@type["type"]["name"]</p>
+        }
+        <h3>Weight:</h3>
+        <p>@ViewBag.pokemon["weight"]</p>
+        <h3>Height:</h3>
+        <p>@ViewBag.pokemon["height"]</p>
+    } else {
+        <h1>Welcome to the PokeInfo Project!</h1>
+    }
+}
