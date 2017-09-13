@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <h1>Noteable Notes</h1>
+      <div id="noteContainer">
+        @{
+          foreach(var note in @ViewBag.AllNotes){
+            string descID = "desc" + @note["id"];
+            string deleteID = "delete" + @note["id"];
+            string squareID = "square" + @note["id"];
+            <div id=@squareID>
+              <div class="left">
+                <h4>@note["title"]</h4>
+                <form class="descForm" id=@note["id"]>
+                  <div class='desc' id=@descID>@note["content"]</div>
+                  <div class="hold">
+                    <textarea class='descBox' name="content"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="right">
+                <button class="delete" id=@deleteID>Delete</button>
+              </div>
+              <hr>
+            </div>
+          }
+        }
+      </div>
+      <form id="addForm">
+        <div class="form-group">
+          <input type="text" name="title" id="title" class="form-control" placeholder="Insert note title here...">
+        </div>
+        <button id="addButton" type="submit" class="btn btn-info">Add Note</button>
+      </form>
+    </div>
+  </div>
+</div>
