@@ -1,5 +1,32 @@
 @{
-    ViewData["Title"] = "Home Page";
+  ViewData["Title"] = "Home Page";
 }
-<h1>Default Blank Page~</h1>
-<p>Get to adding stuff</p>
+<div class='container-fluid'>
+  <h1>Movie Lookup</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <form id="search-form">
+      <div class="form-group">
+        <label for='info'>Search for a movie:</label>
+        <input type="text" name="info" class='form-control' id="search">
+      </div>
+      </form>
+    </div>
+  </div>
+  <hr>
+
+  <table class="table table-striped table-hover" id="movieData">
+  @{
+    foreach(var movie in @ViewBag.movies){
+      string myDate = @movie["release_date"].ToString("MMMM dd, yyyy");
+      <tr>
+        <td>@movie["title"]</td>
+        <td>Rating: @movie["rating"]</td>
+        <td>Released on @myDate</td>
+      </tr>
+    }
+  }
+  </table>
+</div>
+
+
