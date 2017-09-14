@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container-fluid">
+<h1>Enter your information</h1>
+<div class="row">
+    <div class="col-md-6">
+<form method="post" action="submit">
+    <div class="form-group">
+        <label for="first">First name:</label>
+        <input type="text" name="first" class="form-control">
+        @if(@ViewBag.first != ""){
+            <div class="error">@ViewBag.first</div>
+        }
+    </div>
+    <div class="form-group">
+        <label for="last">Last name:</label>
+        <input type="text" name="last" class="form-control">
+        @if(@ViewBag.last != ""){
+            <div class="error">@ViewBag.last</div>
+        }
+    </div>
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" name="age" class="form-control">
+        @if(@ViewBag.age != ""){
+            <div class="error">@ViewBag.age</div>
+        }
+    </div>
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="text" name="email" class="form-control">
+        @if(@ViewBag.email != ""){
+            <div class="error">@ViewBag.email</div>
+        }
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" name="password" class="form-control">
+        @if(@ViewBag.pw != ""){
+            <div class="error">@ViewBag.pw</div>
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+</div>
+
+</div>
