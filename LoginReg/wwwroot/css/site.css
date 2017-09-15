@@ -1,0 +1,33 @@
+/*Write all of your CSS here*/
+.register, .login{
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    width: 120px;
+}
+
+.msg {
+    text-align: center;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.footer{
+    height: 100px;
+}
+
+.left, .right {
+    display: inline-block;
+}
+
+.success-msg{
+    color: green;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.span{
+    display: inline-block;
+    color: red;
+}
