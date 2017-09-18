@@ -1,0 +1,31 @@
+@model Lost.Models.Trail
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container-fluid">
+    <h1>Lost in the woods</h1>
+    <h3>A list of local hiking trails</h3>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Trail Name</th>
+                <th>Trail Length (miles)</th>
+                <th>Final Elevation (feet)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach(var trail in @ViewBag.trails){
+                    <tr>
+                        <td><a asp-controller="Home" asp-action="ViewTrail" asp-route-id=@trail.Id>@trail.Name</a></td>
+                        <td>@trail.Length</td>
+                        <td>@trail.Elevation</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <a href="new"><button class="btn btn-info">Add a new trail</button></a>
+
+</div>

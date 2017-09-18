@@ -1,0 +1,63 @@
+@model Lost.Models.Trail
+
+@{
+    ViewData["Title"] = "Add a Trail";
+}
+
+<div class="row">
+    <div class="col-md-9">
+        <h1>Add a new trail</h1>
+    </div>
+    <div class="col-md-3">
+        <a href="/"><button class="btn btn-info">Go Home</button></a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <form asp-controller="Home" asp-action="Create" method="post">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input class="form-control" asp-for="Name"/>
+            <p><span asp-validation-for="Name"></span></p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <textarea class="form-control" asp-for="Description"></textarea>
+            <p><span asp-validation-for="Description"></span></p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Length">Length (miles)</label>
+            <input class="form-control" asp-for="Length"/>
+            <p><span asp-validation-for="Length"></span></p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Elevation">Elevation (feet)</label>
+            <input class="form-control" asp-for="Elevation"/>
+            <p><span asp-validation-for="Elevation"></span></p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+        <div class="form-group">
+            <label asp-for="Longitude"></label>
+            <input class="form-control" asp-for="Longitude"/>
+            <p><span asp-validation-for="Longitude"></span></p>
+        </div>
+            </div>
+
+            <div class="col-md-6">
+        <div class="form-group">
+            <label asp-for="Latitude"></label>
+            <input class="form-control" asp-for="Latitude"/>
+            <p><span asp-validation-for="Latitude"></span></p>
+        </div>
+            </div>
+        </div>
+        <button class="btn btn-info" type="submit">Add Trail</button>
+
+        </form>
+
+    </div>
+</div>

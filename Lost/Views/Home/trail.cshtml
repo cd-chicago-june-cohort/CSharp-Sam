@@ -1,0 +1,24 @@
+<h1>@ViewBag.trail.Name</h1>
+<h4>Description:</h4>
+<p>@ViewBag.trail.Description</p>
+<h4>Trail Length:</h4>
+<p>@ViewBag.trail.Length Miles</p>
+<h4>Final Elevation:</h4>
+<p>@ViewBag.trail.Elevation Feet</p>
+<h4>Longitude:</h4>
+@{
+    if(@ViewBag.trail.Longitude < 0) {
+        <p>@ViewBag.trail.Longitude °S</p>
+    } else {
+        <p>@ViewBag.trail.Longitude °N</p>
+    }
+}
+<h4>Latitude:</h4>
+@{
+    if(@ViewBag.trail.Latitude < 0) {
+        <p>@ViewBag.trail.Latitude °E</p>
+    } else {
+        <p>@ViewBag.trail.Latitude °W</p>
+    }
+}
+<a href="/"><button class="btn btn-info">Go home</button></a>
