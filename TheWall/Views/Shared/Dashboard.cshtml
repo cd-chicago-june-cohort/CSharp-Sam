@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-9">
+    <h3 class="welcome">Welcome, @ViewBag.user["first_name"]</h3>
+  </div>
+  <div class="col-md-3">
+    <a href="/logout"><button class="btn btn-primary logout">Log out</button></a>
+  </div>
+</div>
+<hr>
+<h1 class="wall">THE WALL</h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+<form action='create' method='post'>
+  <div class="form-group">
+  <label for="post">Post a message:</label>
+  <textarea class="post-box form-control" name="post"></textarea></div>
+  <button class="btn btn-primary post-btn" type="submit">Post</button>
+</form>
+  </div>
+</div>
+<hr>
+@{
+  foreach(var result in @ViewBag.results){
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+          <div class="col-md-9">
+          <h4>@result["name"] - @result["date"]</h4>
+          </div>
+          <div class="col-md-3">
+            @if(@result["user_id"] == @ViewBag.user["id"]) {
+              <button class="btn btn-primary">Delete</button>
+            }
+          </div>
+        </div>
+        <div class="post-content">@result["content"]</div>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <hr>
+
+      @foreach(var com in @ViewBag.comments){
+        @if(@com["post_id"] == @result["post_id"]) {
+          <h6>@com["name"] - @com["date"]</h6>
+          <div>@com["comment"]</div>
+        }
+      }
+
+      <form action='newcomment' method='post'>
+        <div class="form-group">
+        <label for="comment">Leave a comment:</label>
+        <input type="hidden" value=@result["post_id"] name="which_post">
+        <textarea class="post-box form-control" name="comment"></textarea></div>
+        <button class="btn btn-primary post-btn" type="submit">Comment</button>
+      </form>
+      </div>
+    </div>
+    <hr>
+  }
+}
