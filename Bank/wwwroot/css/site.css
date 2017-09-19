@@ -1,0 +1,9 @@
+/*Write all of your CSS here*/
+.error{
+    color: red;
+}
+
+span{
+    display: block;
+    color: red;
+}

@@ -1,0 +1,35 @@
+@model Bank.Models.Transaction
+
+<h1>Welcome, @ViewBag.currentUser.first @ViewBag.currentUser.last</h1>
+<h3>Current balance:</h3>
+<h5>$@ViewBag.currentUser.balance</h5>
+<div>@ViewBag.FundMsg</div>
+<form asp-controller="Home" asp-action="Transact" method='post'>
+    <div class="form-group col-md-4">
+        <label asp-for="amount">Amount:</label>
+        <input asp-for="amount" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-info">Submit</button>
+</form>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            for(var i = @ViewBag.currentUser.transactions.Count - 1; i >= 0; i-= 1){
+                var item = @ViewBag.currentUser.transactions[i];
+                var myDate = String.Format("{0:MMM d, yyyy h:mm}", @item.created_at);
+                <tr>
+                    <td>$@item.amount</td>
+                    <td>@myDate</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<a href="/logout"><button class="btn btn-primary">Log Out</button></a>
+
