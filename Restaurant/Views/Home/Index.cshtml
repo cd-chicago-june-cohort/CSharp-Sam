@@ -1,0 +1,47 @@
+@model Restaurant.Models.Review
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Write a new review:</h1>
+
+<form asp-controller="Home" asp-action="CreateReview" method="post">
+    <div class="form-group">
+        <label asp-for="reviewer">Reviewer Name:</label>
+        <input class="form-control" asp-for="reviewer"/>
+        <p><span asp-validation-for="reviewer"></span></p>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="restaurant">Restaurant Name:</label>
+        <input class="form-control" asp-for="restaurant"/>
+        <p><span asp-validation-for="restaurant"></span></p>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="review">Review:</label>
+        <textarea class="form-control" asp-for="review"></textarea>
+        <p><span asp-validation-for="review"></span></p>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="stars">Stars:</label>
+        <select class="form-control" asp-for="stars">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <p><span asp-validation-for="stars"></span></p>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="visit_date">Date of Visit:</label>
+        <input type="date" class="form-control" asp-for="visit_date"/>
+        <p><span asp-validation-for="visit_date"></span></p>
+    </div>
+
+    <button type="submit" class="btn btn-info">Submit</button>
+</form>
+<a href="/reviews"><button class="btn btn-primary">See all reviews</button></a>
