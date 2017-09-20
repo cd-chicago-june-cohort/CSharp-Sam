@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-9">
+        <h1>@ViewBag.wedding.wedder1 & @ViewBag.wedding.wedder2 's Wedding</h1>
+    </div>
+    <div class="col-md-3">
+        <a href="/dashboard"><button class="btn btn-success">Dashboard</button></a>
+        <a href="/logout"><button class="btn btn-primary">Log Out</button></a>
+    </div>
+</div>
+<h4>Date:</h4>
+@{
+    var myDate = String.Format("{0:MMMM d, yyyy}", @ViewBag.wedding.date);
+    <h3>@myDate</h3>
+}
+<h4>Guests:</h4>
+@{
+    foreach(var guest in @ViewBag.wedding.guests){
+        <p>@guest.user.first @guest.user.last</p>
+    }
+}

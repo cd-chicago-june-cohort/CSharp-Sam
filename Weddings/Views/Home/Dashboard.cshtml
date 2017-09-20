@@ -1,0 +1,48 @@
+@using Weddings.Models
+
+<div class="row">
+    <div class="col-md-9">
+        <h1>Welcome to the Wedding Planner, @ViewBag.currentUser.first</h1>
+    </div>
+    <div class="col-md-3">
+        <a href="logout"><button class="btn btn-success">Log Out</button></a>
+    </div>
+</div>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Wedding</th>
+            <th>Date</th>
+            <th>Guests</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach(var wed in @ViewBag.weddings){
+                var myDate = String.Format("{0:MMM d, yyyy}", @wed.date);
+                var attending = false;
+                @foreach(var guest in @wed.guests){
+                    @if(guest.userId == @ViewBag.userCheck){
+                        attending = true;
+                    }
+                }
+                <tr>
+                    <td><a href="wedding/@wed.id">@wed.wedder1 & @wed.wedder2</a></td>
+                    <td>@myDate</td>
+                    <td>@wed.guests.Count</td>
+                    @if(@wed.userId == @ViewBag.userCheck){
+                        <td><a href="/delete/@wed.id">Delete</a></td>
+                    } else {
+                        @if(@attending == true){
+                            <td><a href="/cancel/@wed.id">un-RSVP</a></td>
+                        } else {
+                            <td><a href="/rsvp/@wed.id">RSVP</a></td>
+                        }
+                    }
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<a href="form"><button class="btn btn-info">Add Wedding</button></a>
