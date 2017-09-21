@@ -1,0 +1,152 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+
+<div class="filter-div col-md-2">@Html.Partial("DashSearch")</div>
+
+<div class="right-content-div col-md-10">
+    @{
+        int c = @ViewBag.products.Count;
+        if(c >= 3) {
+            @for(var i=1; i <=3; i+=1){
+                <div class="product-cube">
+                    <div class="frame">
+                        <img src=@ViewBag.products[c - i].image>
+                    </div>
+                    <p>@ViewBag.products[c - i].name<br>(@ViewBag.products[c - i].quantity Left)</p>
+                </div>
+            }
+        };
+        if(c < 3){
+            @for(var i=1; i <=c; i+=1){
+                <div class="product-cube">
+                    <div class="frame">
+                        <img src=@ViewBag.products[c - i].image>
+                    </div>
+                    <p>@ViewBag.products[c - i].name<br>(@ViewBag.products[c - i].quantity Left)</p>
+                </div>
+            }
+        }
+    }
+    <a href="/products"><button class="btn view-all btn-link">View all products</button></a>
+    <h3 class="underlined">Recent orders:</h3>
+    <ul>
+        @{
+            int k = @ViewBag.orders.Count;
+            if(k >= 3) {
+                @for(var i=1; i <=3; i+=1){
+                    string myStr = "";
+                    @if(@ViewBag.orders[k - i].quantity==1) {
+                        myStr = @ViewBag.orders[k - i].customer.name + " purchased " + @ViewBag.orders[k - i].quantity + " " + @ViewBag.orders[k - i].product.name;
+                    }
+                    @if(@ViewBag.orders[k - i].quantity > 1) {
+                        myStr = @ViewBag.orders[k - i].customer.name + " purchased " + @ViewBag.orders[k - i].quantity + " " + @ViewBag.orders[k - i].product.name + "s";
+                    }
+                    string dateStr = "";
+                    TimeSpan past = new TimeSpan(@ViewBag.orders[k - i].created_at.Ticks);
+                    var myDate = DateTime.Now;
+                    TimeSpan present = new TimeSpan(myDate.Ticks);
+                    var minutesAgo = Math.Floor(present.TotalMinutes - past.TotalMinutes);
+                    dateStr = "(" + @minutesAgo + " minutes ago...)";
+                    if(minutesAgo >= 60) {
+                        var hoursAgo = Math.Floor(present.TotalHours - past.TotalHours);
+                        dateStr = "(" + @hoursAgo + " hours ago...)";
+                        if (hoursAgo >= 24) {
+                            var daysAgo = Math.Floor(present.TotalDays - past.TotalDays);
+                            dateStr = "(" + @daysAgo + " days ago...)";
+                        }
+                    }
+                    
+                    
+                    <li>@myStr @dateStr</li>
+                }
+            };
+            @if(k < 3){
+                @for(var i=1; i <=k; i+=1){
+                    string myStr = "";
+                        @if(@ViewBag.orders[k - i].quantity==1) {
+                            myStr = @ViewBag.orders[k - i].customer.name + " purchased " + @ViewBag.orders[k - i].quantity + " " + @ViewBag.orders[k - i].product.name;
+                        }
+                        @if(@ViewBag.orders[k - i].quantity > 1) {
+                            myStr = @ViewBag.orders[k - i].customer.name + " purchased " + @ViewBag.orders[k - i].quantity + " " + @ViewBag.orders[k - i].product.name + "s";
+                        }
+                        string dateStr = "";
+                        TimeSpan past = new TimeSpan(@ViewBag.orders[k - i].created_at.Ticks);
+                        var myDate = DateTime.Now;
+                        TimeSpan present = new TimeSpan(myDate.Ticks);
+                        var minutesAgo = Math.Floor(present.TotalMinutes - past.TotalMinutes);
+                        dateStr = "(" + @minutesAgo + " minutes ago...)";
+                        if(minutesAgo >= 60) {
+                            var hoursAgo = Math.Floor(present.TotalHours - past.TotalHours);
+                            dateStr = "(" + @hoursAgo + " hours ago...)";
+                            if (hoursAgo >= 24) {
+                                var daysAgo = Math.Floor(present.TotalDays - past.TotalDays);
+                                dateStr = "(" + @daysAgo + " days ago...)";
+                            }
+                        }
+                        <li>@myStr @dateStr</li>
+                }
+            }
+        }
+    </ul>
+    <a href="/orders"><button class="btn view-all btn-link">View all orders</button></a>
+
+    <h3 class="underlined">New Customers:</h3>
+    <ul>
+        @{
+            int j = @ViewBag.customers.Count;
+            if(j >= 3) {
+                @for(var i=1; i <=3; i+=1){
+                    string myStr = "";
+                    myStr = @ViewBag.customers[j - i].name + " joined the store.";
+                    string dateStr = "";
+                    TimeSpan past = new TimeSpan(@ViewBag.customers[j - i].created_at.Ticks);
+                    var myDate = DateTime.Now;
+                    TimeSpan present = new TimeSpan(myDate.Ticks);
+                    var minutesAgo = Math.Floor(present.TotalMinutes - past.TotalMinutes);
+                    dateStr = "(" + @minutesAgo + " minutes ago...)";
+                    if(minutesAgo >= 60) {
+                        var hoursAgo = Math.Floor(present.TotalHours - past.TotalHours);
+                        dateStr = "(" + @hoursAgo + " hours ago...)";
+                        if (hoursAgo >= 24) {
+                            var daysAgo = Math.Floor(present.TotalDays - past.TotalDays);
+                            dateStr = "(" + @daysAgo + " days ago...)";
+                        }
+                    }
+                    <li>@myStr @dateStr</li>
+                }
+            };
+            @if(j < 3){
+                @for(var i=1; i <=j; i+=1){
+                    string myStr = "";
+                    myStr = @ViewBag.customers[j - i].name + " joined the store.";
+                    string dateStr = "";
+                    TimeSpan past = new TimeSpan(@ViewBag.customers[j - i].created_at.Ticks);
+                    var myDate = DateTime.Now;
+                    TimeSpan present = new TimeSpan(myDate.Ticks);
+                    var minutesAgo = Math.Floor(present.TotalMinutes - past.TotalMinutes);
+                    dateStr = "(" + @minutesAgo + " minutes ago...)";
+                    if(minutesAgo >= 60) {
+                        var hoursAgo = Math.Floor(present.TotalHours - past.TotalHours);
+                        dateStr = "(" + @hoursAgo + " hours ago...)";
+                        if (hoursAgo >= 24) {
+                            var daysAgo = Math.Floor(present.TotalDays - past.TotalDays);
+                            dateStr = "(" + @daysAgo + " days ago...)";
+                        }
+                    }    
+                    <li>@myStr @dateStr</li>
+                }
+            }
+        }
+    </ul>
+    <a href="/customers"><button class="btn view-all btn-link">View all customers</button></a>
+
+
+
+</div>
+
+</div>
+<div class="row footer">
+
+</div>

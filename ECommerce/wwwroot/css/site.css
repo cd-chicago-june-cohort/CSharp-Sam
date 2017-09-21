@@ -1,0 +1,85 @@
+/*Write all of your CSS here*/
+.header{
+    margin-top: 25px;
+}
+
+.btn-success{
+    margin-top: 5px;
+}
+
+.table-text{
+    font-size: 18px;
+}
+
+
+.search{
+    float: right;
+}
+
+.product-page{
+    margin-top: 30px;
+}
+
+.block-txt{
+    display: block;
+}
+
+.product-cube{
+    width: 250px;
+    height: 260px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.product-cube p {
+    text-align: center;
+}
+
+.frame{
+    width: 180px;
+    height: 180px;
+    border: 3px solid salmon;
+    border-radius: 3px;
+    vertical-align: top;
+    overflow: hidden;
+    margin: auto;
+}
+
+.frame img{
+    width: 180px;
+    height: 180px;
+}
+
+.shh{
+    display: none;
+}
+
+.right-content-div{
+    padding-top: 20px;
+    padding-left: 65px;
+}
+
+.view-all{
+    font-size: 18px;
+    display: block;
+    margin: auto;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+.filter-div{
+    padding-top: 40px;
+}
+
+.footer{
+    height: 80px;
+}
+
+.btn-info{
+    background: linear-gradient(#04519b, #033c73 60%, #02325f);
+    border: none;
+}

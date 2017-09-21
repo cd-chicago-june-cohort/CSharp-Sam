@@ -1,0 +1,56 @@
+@model ECommerce.Models.Product
+
+<div class="product-page row">
+
+    <div class="left col-md-3">
+        <div class="row">
+        <form action="filterProducts" method="post">
+            <input type="text" class="form-control search" name="searchStr" placeholder="Filter...">
+            <input type="submit" class="btn btn-success search" value="Search">
+        </form></div>
+        <div class="row">
+        <h4 class="block-txt">Add a new product:</h4>
+        <p>@ViewBag.existing</p>
+        <form asp-controller="Home" asp-action="CreateProduct" method="post">
+            <div class="form-group">
+                <label asp-for="name">Product Name:</label>
+                <input class="form-control" asp-for="name">
+            </div>
+            <p><span asp-validation-for="name"></span></p>
+            <div class="form-group">
+                <label asp-for="image">Image(url):</label>
+                <input class="form-control" asp-for="image">
+            </div>
+            <p><span asp-validation-for="image"></span></p>
+
+            <div class="form-group">
+                <label asp-for="description">Description:</label>
+                <textarea class="form-control" asp-for="description"></textarea>
+            </div>
+            <p><span asp-validation-for="description"></span></p>
+
+            <div class="form-group">
+                <label asp-for="quantity">Initial Quantity:</label>
+                <input class="form-control" asp-for="quantity">
+            </div>
+            <p><span asp-validation-for="quantity"></span></p>
+
+            <button type="submit" class="btn btn-success">Add!</button>
+        </form>
+        </div>
+    </div>
+    <div class="right col-md-9">
+        @{
+            foreach(var product in @ViewBag.products){
+                <div class="product-cube">
+                    <div class="frame">
+                        <img src=@product.image>
+                    </div>
+                    <p>@product.name<br>(@product.quantity Left)</p>
+                </div>
+            }
+        }
+    </div>
+
+</div>
+<div class="row footer"></div>

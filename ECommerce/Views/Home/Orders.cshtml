@@ -1,0 +1,75 @@
+@model ECommerce.Models.Purchase
+
+<h2>Add a new order</h2>
+<p>@ViewBag.existing</p>
+<form asp-controller="Home" asp-action="CreateOrder" method="post">
+    <div class="row">
+    <div class="form-group col-md-5">
+        <label asp-for="customerId">Customer:</label>
+        <select class="form-control" asp-for="customerId">
+            <option></option>
+            @{
+                foreach(var c in @ViewBag.customers){
+                    <option value=@c.id>@c.name</option>
+                }
+            }
+        </select>
+        <p><span asp-validation-for="customerId"></span></p>
+    </div>
+    </div>
+    <div class="col-md-5">
+        <div class="row">
+        <div class="form-group col-md-8">
+            <label asp-for="productId">Product:</label>
+            <select id="product" class="form-control" asp-for="productId">
+                <option Count=0></option>
+                @{
+                    foreach(var p in @ViewBag.products){
+                        <option value=@p.id>@p.name</option>
+                    }
+                }
+            </select>
+            <p><span asp-validation-for="productId"></span></p>
+        </div>
+        @{
+            foreach(var i in @ViewBag.products){
+                string secretId = @i.id.ToString();
+                <div class="shh" id=@secretId>@i.quantity</div>
+            }
+        }
+        <div class="form-group col-md-4">
+            <label asp-for="quantity">Quantity:</label>
+            <select asp-for="quantity" class="form-control" id="quantity">
+                <option></option>
+            </select>
+        </div>
+        <p><span asp-validation-for="quantity"></span></p>
+    </div><input type="submit" class="btn btn-warning" value="Place Order"></div>
+</form>
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">@Html.Partial("SearchOrders")</div>
+</div>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach(var o in @ViewBag.orders){
+                var myDate = String.Format("{0:MMM d, yyyy}", @o.created_at);
+                <tr>
+                    <td>@o.customer.name</td>
+                    <td>@o.product.name</td>
+                    <td>@o.quantity</td>
+                    <td>@myDate</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

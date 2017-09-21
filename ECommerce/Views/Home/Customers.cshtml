@@ -1,0 +1,37 @@
+@model ECommerce.Models.Customer
+
+<h2>Add a new customer</h2>
+<form asp-controller="Home" asp-action="CreateCustomer" method="post">
+    <div class="form-group col-md-6">
+        <label asp-for="name">Customer Name:</label>
+        <input class="form-control" asp-for="name">
+        <p><span asp-validation-for="name"></span></p>
+        <p>@ViewBag.existing</p>
+        <button type="submit" class="btn btn-success">Add!</button>
+    </div>
+</form>
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">@Html.Partial("SearchName")</div>
+</div>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach(var c in @ViewBag.customers){
+                var myDate = String.Format("{0:MMM d, yyyy}", @c.created_at);
+                <tr>
+                    <td class="table-text">@c.name</td>
+                    <td class="table-text">@myDate</td>
+                    <td><a href="/customers/remove/@c.id"><button class="btn btn-danger">Remove</button></a></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
